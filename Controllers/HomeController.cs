@@ -23,6 +23,20 @@ namespace intern_ally.Controllers
             return View();
         }
 
+
+        public IActionResult Intern()
+        {
+            InternViewModel ivm = new InternViewModel()
+            {
+                Name = "John Smith",
+                Email = "johnsmith@mail.com",
+                Title = "Web Designer",
+                ContactNumber = "201-423-6753",
+                Skills = "HTML, CSS, Javascript"
+            };
+            return View(ivm);
+        }
+
         public IActionResult Privacy()
         {
             return View();
