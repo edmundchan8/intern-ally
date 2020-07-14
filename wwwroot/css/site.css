@@ -69,3 +69,23 @@ body {
   white-space: nowrap;
   line-height: 60px; /* Vertically center the text there */
 }
+
+/* Table styles
+-------------------------------------------------- */
+table {
+    margin: 60px 5px 60px 5px;
+}
+
+#table-name, #table-project-description {
+    text-align: left;
+}
+
+td, th {
+    border: 1px solid #dddddd;
+    text-align: center;
+    padding: 8px;
+}
+
+tr:nth-child(even) {
+    background-color: #dddddd;
+}
