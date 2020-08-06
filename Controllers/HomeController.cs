@@ -18,12 +18,19 @@ namespace intern_ally.Controllers
             _logger = logger;
         }
 
+        [HttpGet]
         public IActionResult Index()
         {
             return View();
         }
 
+        [HttpGet]
+        public IActionResult InternsView()
+        {
+            return View();
+        }
 
+        [HttpGet]
         public IActionResult Intern()
         {
             InternViewModel ivm = new InternViewModel()
