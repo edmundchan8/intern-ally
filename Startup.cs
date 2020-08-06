@@ -7,6 +7,9 @@ using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+using Microsoft.EntityFrameworkCore;
+using intern_ally.Data;
+
 
 namespace intern_ally
 {
@@ -23,6 +26,8 @@ namespace intern_ally
         public void ConfigureServices(IServiceCollection services)
         { 
             services.AddControllersWithViews();
+            services.AddDbContext<MvcInternContext>(options =>
+            options.UseSqlServer(Configuration.GetConnectionString("MvcInternContext")));
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
